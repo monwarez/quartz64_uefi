@@ -118,6 +118,7 @@
   # Rockchip SoC libraries
   CruLib|Silicon/Rockchip/Rk356x/Library/CruLib/CruLib.inf
   GpioLib|Silicon/Rockchip/Rk356x/Library/GpioLib/GpioLib.inf
+  I2cLib|Silicon/Rockchip/Rk356x/Library/I2cLib/I2cLib.inf
   MultiPhyLib|Silicon/Rockchip/Rk356x/Library/MultiPhyLib/MultiPhyLib.inf
   OtpLib|Silicon/Rockchip/Rk356x/Library/OtpLib/OtpLib.inf
   SdramLib|Silicon/Rockchip/Rk356x/Library/SdramLib/SdramLib.inf
@@ -428,6 +429,11 @@
   gRk356xTokenSpaceGuid.PcdCpuName|"Rockchip RK3566 (Cortex-A55)"
 
   #
+  # Only a single USB controller is brought out
+  #
+  gRk356xTokenSpaceGuid.PcdXhc0Status|0xF
+
+  #
   # PCI support
   #
   gEfiMdePkgTokenSpaceGuid.PcdPciExpressBaseAddress|0x0000000300000000
@@ -444,8 +450,6 @@
   gEfiMdePkgTokenSpaceGuid.PcdPciIoTranslation|0x000000033FFF0000
   gRk356xTokenSpaceGuid.PcdPcieResetGpioBank|1
   gRk356xTokenSpaceGuid.PcdPcieResetGpioPin|10
-  gRk356xTokenSpaceGuid.PcdPciePowerGpioBank|0
-  gRk356xTokenSpaceGuid.PcdPciePowerGpioPin|22
 
 [PcdsDynamicHii.common.DEFAULT]
 
